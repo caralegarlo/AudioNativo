@@ -1,9 +1,10 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AUDIO NATIVO</title>
+    <title>AUDIO NATIVO - Perfil</title>
     <link rel="stylesheet" href="css/styles_Perfil.css">
 </head>
 <body>
@@ -24,7 +25,7 @@
         
         <section id="inicio" class="seccion-contenido active">
             <div class="c-hero">
-                <h2>Bienvenido a AUDIO NATIVO</h2>
+                <h2>Bienvenido, <%= session.getAttribute("usuarioNombre") %></h2>
                 <p>Explora el patrimonio sonoro de Colombia.</p>
             </div>
             <div class="c-info-container">
