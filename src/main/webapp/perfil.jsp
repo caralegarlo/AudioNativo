@@ -17,7 +17,7 @@
             <a href="#" class="menu__link active" data-target="inicio">1. Inicio</a>
             <a href="#" class="menu__link" data-target="sec-sonidos">2. Sonidos</a>
             <a href="#" class="menu__link" data-target="preservacion">3. Preservación</a>
-            <a href="inicio.html" class="cerrar-sesion">Cerrar Sesión</a>
+            <a href="salir.jsp" class="cerrar-sesion">Cerrar Sesión</a>
         </nav>
     </aside>
 
