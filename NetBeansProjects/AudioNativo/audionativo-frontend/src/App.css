@@ -1,0 +1,198 @@
+/* App.css - Estilos finales Audio Nativo */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  background-color: #ffffff;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  width: 380px;
+  text-align: center;
+}
+
+.project-logo {
+  max-width: 200px; /* Tamaño de imagen ampliado */
+  height: auto;
+  margin-bottom: 25px;
+}
+
+h1 {
+  color: #1b5e20;
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  border: 1.5px solid #eee;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 20px; /* Mayor espacio en el botón */
+  background-color: #2e7d32;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 25px;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+.btn-login:hover {
+  background-color: #1b5e20;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* Perfil Styles - Dashboard Look */
+.profile-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  width: 750px;
+  text-align: left;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+}
+
+.user-info-panel {
+  background: #fdfdfd;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  border-top: 4px solid #2e7d32;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.user-info-panel h3 {
+  margin-top: 0;
+  color: #555;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.categories-container {
+  padding-left: 10px;
+}
+
+.categories-container h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.category-item {
+  background: #ffffff;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #444;
+}
+
+.category-item:hover {
+  border-color: #2e7d32;
+  background-color: #f1f8e9;
+  transform: translateX(5px);
+  color: #1b5e20;
+}
+
+.btn-logout {
+  width: 100%;
+  padding: 14px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: all 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: #d32f2f;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
