@@ -1,66 +1,58 @@
 import React from 'react';
-import logo from './logo.png';
+import './App.css'; 
+
+// Importa los íconos si los tienes, o usa emojis temporalmente
+const IconoFX = () => <span role="img" aria-label="fx">🍃</span>;
+const IconoAmbiente = () => <span role="img" aria-label="ambiente">🌎</span>;
+const IconoFoley = () => <span role="img" aria-label="foley">👣</span>;
+const IconoCatalogo = () => <span role="img" aria-label="catalogo">➕</span>;
 
 function Perfil({ nombre, alSalir }) {
   return (
-    <div className="profile-card">
-      {/* Encabezado del Perfil */}
-      <div className="profile-header">
-        <div>
+    <div className="perfil-fullscreen">
+      {/* Barra Lateral (Sidebar) */}
+      <aside className="perfil-sidebar">
+        <div className="sidebar-header">
+          <div className="colombia-logo-mini"></div> {/* Logo pequeño */}
           <h1>AUDIO NATIVO</h1>
-          <p style={{ margin: 0, color: '#888', fontSize: '14px' }}>
-            Sistema de Preservación y Catalogación Sonora
-          </p>
+          <p>Preservación Sonora</p>
         </div>
-        <img src={logo} alt="Logo" style={{ height: '60px', width: 'auto' }} />
-      </div>
-      
-      {/* Contenido Principal */}
-      <div className="profile-content">
         
-        {/* Panel lateral de usuario */}
-        <div className="user-info-panel">
-          <h3>Sesión Activa</h3>
-          <p style={{ fontSize: '14px', color: '#666', marginBottom: '5px' }}>Bienvenido de nuevo,</p>
-          <h2 style={{ color: '#1b5e20', margin: '0 0 15px 0', fontSize: '22px' }}>{nombre}</h2>
-          
-          <div style={{ fontSize: '13px', color: '#777', lineHeight: '1.6' }}>
-            <p>Has ingresado a la audioteca nacional. Tienes acceso total a los recursos de preservación.</p>
+        <div className="sesion-info">
+          <h3>SESIÓN ACTIVA</h3>
+          <p className="bienvenida-text">Bienvenido de nuevo,</p>
+          <p className="usuario-nombre">{nombre}</p>
+          <p className="usuario-desc">Has ingresado a la audioteca nacional. Tienes acceso total a los recursos de preservación.</p>
+          <button onClick={alSalir} className="btn-cerrar-sesion">Cerrar Sesión</button>
+        </div>
+      </aside>
+
+      {/* Contenido Principal */}
+      <main className="perfil-main-content">
+        <header className="main-header">
+          <h2>Explorar Audioteca</h2>
+          <p>Selecciona una categoría para comenzar la gestión de archivos:</p>
+        </header>
+
+        <section className="categorias-grid">
+          <div className="categoria-card">
+            <IconoFX />
+            <h3>FX Bioacústica</h3>
           </div>
-
-          <button onClick={alSalir} className="btn-logout">
-            Cerrar Sesión
-          </button>
-        </div>
-
-        {/* Sección de navegación/categorías */}
-        <div className="categories-container">
-          <h3>Explorar Audioteca</h3>
-          <p style={{ fontSize: '14px', color: '#666' }}>
-            Selecciona una categoría para comenzar la gestión de archivos:
-          </p>
-          
-          <ul className="category-list">
-            <li className="category-item">
-              <span style={{ fontSize: '20px', marginRight: '15px' }}>🍃</span>
-              FX Bioacústica
-            </li>
-            <li className="category-item">
-              <span style={{ fontSize: '20px', marginRight: '15px' }}>🌊</span>
-              Ambientes Naturales
-            </li>
-            <li className="category-item">
-              <span style={{ fontSize: '20px', marginRight: '15px' }}>👣</span>
-              Foley de Interacciones
-            </li>
-            <li className="category-item" style={{ background: '#f9f9f9', borderStyle: 'dashed' }}>
-              <span style={{ fontSize: '20px', marginRight: '15px' }}>➕</span>
-              Gestionar Catálogo
-            </li>
-          </ul>
-        </div>
-
-      </div>
+          <div className="categoria-card">
+            <IconoAmbiente />
+            <h3>Ambientes Naturales</h3>
+          </div>
+          <div className="categoria-card">
+            <IconoFoley />
+            <h3>Foley de Interacciones</h3>
+          </div>
+          <div className="categoria-card gestionar-card">
+            <IconoCatalogo />
+            <h3>Gestionar Catálogo</h3>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,198 +1,172 @@
-/* App.css - Estilos finales Audio Nativo */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-body {
+/* --- Estilos Generales para Pantalla Completa --- */
+html, body, #root {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  overflow: hidden; /* Evita scrolls dobles */
 }
 
-.login-card {
+.perfil-fullscreen {
+  display: flex;
+  height: 100vh; /* Ocupa todo el alto de la ventana */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5; /* Fondo gris muy suave */
+}
+
+/* --- Barra Lateral (Sidebar) --- */
+.perfil-sidebar {
+  width: 300px;
   background-color: #ffffff;
-  padding: 45px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  width: 380px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.sidebar-header {
   text-align: center;
-}
-
-.project-logo {
-  max-width: 200px; /* Tamaño de imagen ampliado */
-  height: auto;
-  margin-bottom: 25px;
-}
-
-h1 {
-  color: #1b5e20;
-  margin-bottom: 8px;
-  font-size: 28px;
-  font-weight: 600;
-}
-
-.description {
-  color: #666;
-  font-size: 14px;
-  margin-bottom: 35px;
-}
-
-.form-group {
-  margin-bottom: 25px;
-  text-align: left;
-}
-
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #333;
-  font-size: 14px;
-}
-
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 14px;
-  border: 1.5px solid #eee;
-  border-radius: 10px;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  background-color: #f9f9f9;
-}
-
-.btn-login {
-  width: 100%;
-  padding: 20px; /* Mayor espacio en el botón */
-  background-color: #2e7d32;
-  color: #ffffff;
-  border: none;
-  border-radius: 12px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 25px;
-  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
-}
-
-.btn-login:hover {
-  background-color: #1b5e20;
-  transform: translateY(-2px);
-}
-
-.error-message {
-  color: #d32f2f;
-  font-size: 13px;
-  margin-top: 10px;
-}
-
-/* Perfil Styles - Dashboard Look */
-.profile-card {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-  width: 750px;
-  text-align: left;
-}
-
-.profile-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #e1e1e1;
   padding-bottom: 20px;
-  margin-bottom: 30px;
 }
 
-.profile-header h1 {
+.sidebar-header h1 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin: 10px 0 5px 0;
+}
+
+.sidebar-header p {
+  font-size: 0.9rem;
+  color: #666;
   margin: 0;
-  font-size: 24px;
 }
 
-.profile-content {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 40px;
+.colombia-logo-mini {
+  width: 60px;
+  height: 60px;
+  background-image: url('./logo.png'); /* Asegúrate de que el logo esté aquí */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
-.user-info-panel {
-  background: #fdfdfd;
-  padding: 25px;
-  border-radius: 15px;
+/* --- Info de Sesión en Sidebar --- */
+.sesion-info {
+  margin-top: auto; /* Empuja la info de sesión al fondo */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
   border: 1px solid #eee;
-  border-top: 4px solid #2e7d32;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.user-info-panel h3 {
-  margin-top: 0;
-  color: #555;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.categories-container {
-  padding-left: 10px;
-}
-
-.categories-container h3 {
-  margin-top: 0;
+.sesion-info h3 {
+  font-size: 1rem;
   color: #333;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
-.category-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
+.bienvenida-text {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
 }
 
-.category-item {
-  background: #ffffff;
-  padding: 15px 20px;
-  margin-bottom: 12px;
-  border-radius: 12px;
-  border: 1px solid #eee;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-  color: #444;
+.usuario-nombre {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #2e7d32; /* Verde oscuro (como el botón de login) */
+  margin: 0 0 10px 0;
 }
 
-.category-item:hover {
-  border-color: #2e7d32;
-  background-color: #f1f8e9;
-  transform: translateX(5px);
-  color: #1b5e20;
+.usuario-desc {
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.4;
+  margin-bottom: 20px;
 }
 
-.btn-logout {
+.btn-cerrar-sesion {
   width: 100%;
-  padding: 14px;
-  background-color: #f44336;
+  padding: 12px;
+  background-color: #d32f2f; /* Rojo */
   color: white;
   border: none;
-  border-radius: 10px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  border-radius: 5px;
   cursor: pointer;
-  margin-top: 25px;
-  transition: all 0.3s;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.btn-logout:hover {
-  background-color: #d32f2f;
-  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+.btn-cerrar-sesion:hover {
+  background-color: #b71c1c;
+}
+
+/* --- Contenido Principal --- */
+.perfil-main-content {
+  flex: 1; /* Ocupa el resto del espacio */
+  padding: 50px;
+  overflow-y: auto; /* Permite scroll solo en el contenido */
+  background-image: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%); /* Degradado suave a verde */
+}
+
+.main-header {
+  margin-bottom: 40px;
+}
+
+.main-header h2 {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+}
+
+.main-header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* --- Cuadrícula de Categorías (Cards) --- */
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adaptable */
+  gap: 30px;
+}
+
+.categoria-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #eee;
+}
+
+.categoria-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.categoria-card span {
+  font-size: 2.5rem;
+  margin-right: 20px;
+}
+
+.categoria-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.gestionar-card {
+  background-color: #f1f8e9; /* Fondo verde muy claro */
+  border: 2px dashed #a5d6a7; /* Borde punteado */
+}
+
+.gestionar-card h3 {
+  color: #2e7d32;
 }
